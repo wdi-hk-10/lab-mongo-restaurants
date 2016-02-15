@@ -22,16 +22,23 @@ mongoimport --db test --collection restaurants --drop --file primer-dataset.json
 1. Push `queries.js` to your repo.
 1. Submit a pull request to the project repo.
 
-### Warming up
+### Preparations
+
+Read the [documentation](https://docs.mongodb.org/v3.0/tutorial/query-documents/). Try some simple queries first to get an idea how to use it. Use Robomongo write and test your queries.
+
+### Warm up
+
 1. List out all available `cuisine` from the **whole dataset** and sort them in alphabetical order (Hint: read [this](https://docs.mongodb.org/v3.0/reference/method/db.collection.distinct/)).
 1. Find out all available `cuisine` from the restaurants that are located on `Cross Bay Boulevard` and whose address uses zip code `11414`.
 1. Find the name and address of the `Steak House` owned by your WDI-HK-10 instructor (Hint: You may want to use regular expression).
 
 ### Pizza
+
 1. List out the name of all restaurants which **contain** the word `Pizza` in the *cuisine* but  **DO NOT contain** the word `Pizza` or `Pizzeria` in the restaurant **name** (Hint: use regular expression).
 1. List out the name of all *straight A* (i.e. the restaurant has only received `A` grade ever) restaurants which contain the word `Pizza` in the `cuisine` and are located in the `Queens` *borough* (Hint: you may want to first find out how many available grade values we have in the entire dataset).
 
 ### Hamburgers
+
 1. You are hungry and feel like having a hamburger. Find the number of restaurants listed `Hamburgers` as their main *cuisine*.
 1. Geez, there are way too many of them. Let's narrow down our search. You are in Manhattan right now so let's find how many restaurants listed `Hamburgers` as their main `cuisine` in the `Manhattan` *borough*.
 1. Let's have something nice and get rid of the `McDonald's` in the results. Find how many restaurants listed `Hamburgers` as their main `cuisine` in `Manhattan` *and* exclude all `Mcdonald's` (Note: In the data set, _McDonald's_ was presented in inconsistent ways, e.g. `McDonald's` and `McDonald'S`. So please use the regular expression `/McDonald/` in your query).
@@ -40,4 +47,5 @@ mongoimport --db test --collection restaurants --drop --file primer-dataset.json
 1. Alright, you are just a block away from `Pearl Street`. Find the `name` of the `Hamburger` restaurant (i.e. your query should return the name of the restaurant only) on `Pearl Street`. Your query should now yield exactly *one* restaurant. What is it? (Submit the query and also the name of the restaurant as a comment)
 
 ### Hard (You need to do some research first)
-1. Find the name of the restaurants which listed `Japanese` as their main cuisine and has exactly 9 `grades`.
+
+1. Find the name of the restaurants which listed `Japanese` as their main cuisine and have exactly 9 `grades`.
