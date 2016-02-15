@@ -44,3 +44,13 @@ db.restaurants.find({cuisine:"Hamburgers",borough:"Manhattan",name:{$nin:[/Mcdon
 
 //Hard
 //1
+
+
+db.restaurants.distinct(
+  "name",
+ {
+      "address.street": "Pearl Street",
+      "cuisine":"Hamburgers",
+      "borough":"Manhattan",
+  }
+)
